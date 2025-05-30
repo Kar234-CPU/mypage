@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KAKA - Personal Web Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(120deg, #2196f3 0%, #0d47a1 100%);
+            color: #fff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 650px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.12);
+            border-radius: 20px;
+            box-shadow: 0 12px 40px rgba(33,150,243,0.25);
+            padding: 40px 32px 32px 32px;
+            text-align: center;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            margin-bottom: 22px;
+            background: #1976d2;
+            box-shadow: 0 4px 16px rgba(33,150,243,0.15);
+        }
+        h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.5em;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+        h2 {
+            margin: 0 0 22px 0;
+            font-weight: 400;
+            color: #bbdefb;
+            font-size: 1.3em;
+        }
+        p {
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+        .links a {
+            display: inline-block;
+            margin: 0 12px;
+            color: #fff;
+            background: #1976d2;
+            padding: 12px 24px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(33,150,243,0.10);
+            transition: background 0.2s, transform 0.2s;
+        }
+        .links a:hover {
+            background: #1565c0;
+            transform: translateY(-2px) scale(1.05);
+        }
+        .show-more-btn {
+            margin-top: 18px;
+            padding: 10px 28px;
+            background: #fff;
+            color: #1976d2;
+            border: none;
+            border-radius: 22px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .show-more-btn:hover {
+            background: #1976d2;
+            color: #fff;
+        }
+        .more-info {
+            display: none;
+            margin-top: 18px;
+            background: rgba(25, 118, 210, 0.13);
+            border-radius: 12px;
+            padding: 18px;
+            text-align: left;
+        }
+        .script-links {
+            margin-top: 30px;
+        }
+        .script-links a {
+            color: #fff;
+            background: #43a047;
+            margin: 0 8px;
+            padding: 8px 18px;
+            border-radius: 18px;
+            text-decoration: none;
+            font-size: 0.98em;
+            transition: background 0.2s;
+        }
+        .script-links a:hover {
+            background: #2e7031;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="your-photo.jpg" alt="KAKA" class="profile-pic">
+        <h1>KAKA</h1>
+        <h2>Developer & Creator</h2>
+        <p>
+            Welcome to my personal web page! I'm passionate about coding, automation, and building tools that make life easier. Explore my projects, tools, and scripts below.
+        </p>
+        <div class="links">
+            <a href="mailto:karloperkovic1b@gmail.com">Email</a>
+            <a href="https://github.com/Kar234-CPU" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank">Youtube</a>
+        </div>
+        <button class="show-more-btn" onclick="toggleMoreInfo()">Show More</button>
+        <div class="more-info" id="moreInfo">
+            <h3>About This Site</h3>
+            <ul>
+                <li>🛠️ <b>Tools</b> for productivity and automation</li>
+                <li>📁 <b>Projects</b> in development and released</li>
+                <li>📄 <b>Documentation</b> and guides</li>
+                <li>🧪 <b>Tests</b> and experiments</li>
+                <li>🗃️ <b>Archive</b> of past work</li>
+            </ul>
+            <p>
+                Check out my scripts below for some cool automation in JavaScript and Python!
+            </p>
+        </div>
+        <div class="script-links">
+            <a href="../scripts/example.js" target="_blank">View JavaScript Example</a>
+            <a href="../scripts/example.py" target="_blank">View Python Example</a>
+        </div>
+    </div>
+    <script src="../scripts/example.js"></script>
+    <script>
+        function toggleMoreInfo() {
+            var moreInfo = document.getElementById('moreInfo');
+            var btn = document.querySelector('.show-more-btn');
+            if (moreInfo.style.display === 'block') {
+                moreInfo.style.display = 'none';
+                btn.textContent = 'Show More';
+            } else {
+                moreInfo.style.display = 'block';
+                btn.textContent = 'Show Less';
+            }
+        }
+    </script>
+</body>
+</html>
